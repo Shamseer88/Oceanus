@@ -42,7 +42,6 @@ form {
 }
 input {
   display: block;
-  width: 300px;
   border: none;
   border-bottom: 1px solid #00c0f3;
   font-family: Roboto;
@@ -88,4 +87,125 @@ button {
   font-weight: 300;
   font-size: 11px;
   line-height: 13px;
+  position: relative;
+  left: 20px;
+}
+
+#myChk {
+  position: relative;
+  top: 15px;
+  right: 15px;
+  left: 1px;
+  color: #00c0f3;
+}
+
+/* Popup Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.pop-up {
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 550px;
+  height: 350px;
+  padding: 30px 20px;
+  background: white;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+.pop-up.active {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+.pop-up .close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  background: #757575;
+  color: #f2f2f2;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.pop-up .form h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  background: #47c2c7;
+  color: white;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin-bottom: 25px;
+  margin-top: -30px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.pop-up .form .form-element {
+  margin: 15px 0px;
+}
+.pop-up .form input[type="email"] {
+  margin-top: 15px;
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid #aaa;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #918e8e;
+}
+.pop-up .form p {
+  text-align: center;
+  width: 65%;
+  margin-left: 75px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #918e8e;
+}
+.pop-up .form .form-element button {
+  border: 1px solid #00c0f3;
+  box-sizing: border-box;
+  border-radius: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  height: 50px;
+  background: white;
+  margin-top: 25px;
+  margin-left: 160px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #00c0f3;
 }
